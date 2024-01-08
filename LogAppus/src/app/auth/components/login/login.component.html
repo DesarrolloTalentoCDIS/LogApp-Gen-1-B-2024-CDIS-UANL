@@ -1,24 +1,21 @@
-<body>
-	<div class="main">  	
-		<input type="checkbox" id="chk" aria-hidden="true">
 
-			<div class="signup">
-				<form>
-					<label for="chk" aria-hidden="true">Sign up</label>
-					<input type="text" name="txt" placeholder="User name" required="">
-					<input type="email" name="email" placeholder="Email" required="">
-					<input type="password" name="pswd" placeholder="Password" required="">
-					<button type="submit">Sign up</button>
-				</form>
-			</div>
+<!-- partial:index.partial.html-->
+<div id="bg"></div>
 
-			<div class="login">
-				<form>
-					<label for="chk" aria-hidden="true">Login</label>
-					<input type="email" name="email" placeholder="Email" required="">
-					<input type="password" name="pswd" placeholder="Password" required="">
-					<button type="submit">Login</button>
-				</form>
-			</div>
+<form [formGroup]="formularioLog" (ngSubmit)="login()">
+	<div class="form-field">
+		<input placeholder="ID" formControlName="id" required/>
+    </div>
+
+    <div class="form-field">
+		<input type="password" placeholder="Password" formControlName="pass" required/>
 	</div>
-</body>
+
+    <div class="form-field">
+		<button class="btn" type="submit" [disabled]="formularioLog.invalid">Log in</button>
+	</div>
+	<div class="form-field">
+		<button class="btn-sec" routerLink="/auth/register">Registrarme</button>
+	</div>
+</form>
+<!-- partial-->
