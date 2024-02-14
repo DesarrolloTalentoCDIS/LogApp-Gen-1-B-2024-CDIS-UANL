@@ -3,18 +3,18 @@
 <div id="bg"></div>
 
 <form [formGroup]="formularioLog" (ngSubmit)="login()">
-  <div class="form-field">
+  <div class="form-field input">
     <input placeholder="ID" formControlName="id" required/>
   </div>
   
-  <div class="form-field">
+  <div class="form-field input">
     <input type="password" placeholder="Password" formControlName="pass" required/>                         </div>
   
   <div class="form-field">
     <button class="btn" type="submit">Log in</button>
   </div>
   <div class="form-field">
-    <button class="btn-sec" routerLink="/auth/register">Registrarme</button>
+    <button class="btn-sec" routerLink="/auth/register">Register</button>
   </div>
 
 </form>

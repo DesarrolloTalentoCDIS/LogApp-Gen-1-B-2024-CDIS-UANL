@@ -27,8 +27,9 @@ export class LoginComponent  {
       this.authService.login(id, pass).subscribe(res => {
         if (res === true){
           this.router.navigateByUrl('/dashboard');
-          this.toastr.success(id, 'Haz ingresado correctamente!');
+          this.toastr.success(id, 'Has ingresado correctamente!');
         }else{
+          //console.log(res);
           this.toastr.error(res, 'No se pudo iniciar sesión', {
             timeOut: 4000,
             progressAnimation: 'increasing'
